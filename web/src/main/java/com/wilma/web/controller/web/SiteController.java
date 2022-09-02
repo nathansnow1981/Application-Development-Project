@@ -22,6 +22,12 @@ public class SiteController {
         return "/index";
     }
 
+    @GetMapping("/farzad")
+    public String farzad(Model model){
+        model.addAttribute("currentPage", "Farzad");
+        return "/farzad";
+    }
+
     @RequestMapping("/register")
     public ResponseEntity<?> register(){
         return ResponseEntity.ok("Register");
