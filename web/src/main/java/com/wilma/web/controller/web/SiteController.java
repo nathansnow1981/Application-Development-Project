@@ -25,6 +25,8 @@ public class SiteController {
     @GetMapping("/farzad")
     public String farzad(Model model){
         model.addAttribute("currentPage", "Farzad");
+        //👇This will override the default value in farzad.html
+        model.addAttribute("customHeading", "Farzad IS NOT GOD 🤬");
         return "/farzad";
     }
 

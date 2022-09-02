@@ -7,10 +7,23 @@
 <body>
     <div th:replace="fragments/navigation :: top-navigation"></div>
 
-    <h1>Farzad is GOD!</h1>
+    <h1 th:text="${customHeading}">Farzad is GOD!</h1> <!-- Hard coded values will be overridden with values passed in -->
     <img class="img-center" th:src="@{~/assets/farzad.jpg}" width="25%" height="auto" />
 
     <div th:replace="fragments/scripts"></div>
 </body>
 
 </html>
+
+<!--
+    ========================
+    = Standard Expressions =
+    ========================
+    ${...} : Variable expressions.
+    *{...} : Selection expressions.
+    #{...} : Message (i18n) expressions.
+    @{...} : Link (URL) expressions.
+    ~{...} : Fragment expressions.
+    
+    https://www.thymeleaf.org/doc/articles/standarddialect5minutes.html
+-->
