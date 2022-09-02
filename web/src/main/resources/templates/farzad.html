@@ -2,11 +2,13 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head th:replace="fragments/head"></head>
+<link th:href="@{~/css/farzad.css}" rel="stylesheet" />
 
 <body>
     <div th:replace="fragments/navigation :: top-navigation"></div>
 
     <h1>Farzad is GOD!</h1>
+    <img class="img-center" th:src="@{~/assets/farzad.jpg}" width="25%" height="auto" />
 
     <div th:replace="fragments/scripts"></div>
 </body>
